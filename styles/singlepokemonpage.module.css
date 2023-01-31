@@ -23,6 +23,9 @@
     margin-bottom: 10px;
     font-size: 20px;
 }
+.margin{
+    margin-top: 25px;
+}
 .grid{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -49,6 +52,7 @@
 }
 .flex2{
     display: flex;
+    gap: 15px;
 }
 .grass{
     background-color: #9BCC50;
@@ -80,4 +84,19 @@
 .pill{
     padding:3px 10px;
     border-radius: 3px;
+}
+.move_0{
+    background-color: #FC7C23;
+    color: #FFFFFF;
+    text-transform: capitalize;
+}
+.move_1{
+    background-color: #B97FC9;
+    color: #FFFFFF;
+    text-transform: capitalize;
+}
+.move_2{
+    background-color: #729F3F;
+    color: #FFFFFF;
+    text-transform: capitalize;
 }

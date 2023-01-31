@@ -45,13 +45,40 @@ const pokemon = ({pokemon}) => {
                         <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`} alt={pokemon.name} width="100%" height="100%" />
                     </div>
                     <div>
-                        <div className={`${styles.flex}`}>
-                            <div>
-                                <h4>Type</h4>
+                        <div>
+                            <h4>Type</h4>
+                            <div className={`${styles.flex2}`}>
+                                
                                 {
                                     pokemon?.types.map((type,idx) => {
                                         let typeName = type.type.name;
                                         return <div key={idx} className={`${styles[typeName]} ${styles.pill}`} >{type.type.name}</div>
+                                    })
+                                }
+                            </div>
+                        </div>
+                        <div className={styles.margin}>
+                            <h4>Top 3 Moves</h4>
+                            <div className={`${styles.flex2}`}>
+                                
+                                {
+                                    pokemon?.moves.map((move,idx) => {
+                                        const moveClass = `move_${idx}`
+                                        if(idx<3){
+                                            return <div key={idx} className={`${styles.pill} ${styles[moveClass]} `} >{move.move.name}</div>
+                                        }
+                                    })
+                                }
+                            </div>
+                        </div>
+                        <div className={styles.margin}>
+                            <h4>Stats</h4>
+                            <div>
+                                
+                                {
+                                    pokemon?.stats.map((stat,idx) => {
+                                        return <div key={idx} className={` `} >{stat.base_stat}</div>
+                                        
                                     })
                                 }
                             </div>
@@ -79,6 +106,11 @@ export const getServerSideProps = async ({params}) => {
             stats{
               base_stat
               
+            }
+            moves{
+                move{
+                    name
+                }
             }
             base_experience
             types {
