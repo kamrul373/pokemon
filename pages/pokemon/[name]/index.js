@@ -3,6 +3,7 @@ import Image from "next/image";
 import { request, gql } from 'graphql-request'
 import styles from "../../../styles/singlepokemonpage.module.css"
 import Link from "next/link";
+import { FaHome } from "react-icons/fa";
 const pokemon = ({pokemon}) => {
     console.log(pokemon)
     const imageURL = ``
@@ -77,7 +78,15 @@ const pokemon = ({pokemon}) => {
                                 
                                 {
                                     pokemon?.stats.map((stat,idx) => {
-                                        return <div key={idx} className={` `} >{stat.base_stat}</div>
+                                        const statsname = ["HP","Attack","Defense","Special Attack","Special Defense", "Speed"]
+                                        return <div key={idx}>
+                                            <h5  className={styles.statsheading}>{statsname[idx]}</h5>
+                                            <div  className={styles.lightgrey} >
+                                            <div className={styles.blue} 
+                                                style={{height:"3px", width:`${stat.base_stat}%`}}>
+                                            </div>
+                                        </div>
+                                        </div>
                                         
                                     })
                                 }
@@ -85,7 +94,14 @@ const pokemon = ({pokemon}) => {
                         </div>
                     </div>
                 </div>
+                <div className={styles.btncontainer}>
+                    <Link href="/" className={`${styles.btn}`}>
+                        <FaHome className={styles.icon}></FaHome>
+                        <span>Back to HomePage</span>
+                    </Link>
+                </div>
             </div>
+           
         </div>
     );
 };

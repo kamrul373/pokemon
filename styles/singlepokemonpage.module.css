@@ -9,7 +9,7 @@
 }
 .singlepagecontent{
     background-color: #FFFFFF;
-    width: 80%;
+    width: 90%;
     margin:0 auto;
     height: 100vh;
     padding: 20px;
@@ -30,7 +30,7 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
     padding:50px ;
 }
 .flex{
@@ -99,4 +99,32 @@
     background-color: #729F3F;
     color: #FFFFFF;
     text-transform: capitalize;
+}
+.blue{
+    background-color: #30A7D7;
+    max-width: 100%;
+}
+.lightgrey{
+    background-color: #D9D9D9;
+    margin-bottom: 15px;
+    max-width: 100%;
+}
+.statsheading{
+    margin:7px 0;
+}
+.btncontainer{
+    text-align: center;
+    padding: 20px 0;
+}
+.btn{
+    background-color: #FFCB05;
+    color: white;
+    border:none;
+    padding:8px 15px;
+    cursor: pointer;
+}
+.icon{
+   margin-right: 5px;
+   padding-top: 4px;
+   display: inline-block;
 }
