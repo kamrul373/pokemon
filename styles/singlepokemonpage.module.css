@@ -17,7 +17,11 @@
 .singlepagecontent h2{
     color:#257BC4;
     text-transform: capitalize;
-    font-size: 40px;
+    font-size: 30px;
+}
+.singlepagecontent h4{
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 .grid{
     display: grid;
@@ -32,11 +36,48 @@
     padding-bottom: 20px;
 }
 .card{
-    border-image: conic-gradient(#FAB4D1, #FB7939, #F56B96) 1;
+    border: 3px solid #FB7B2D;
     border-radius: 8px 8px 57px 8px;
-    padding:20px
+    box-sizing: border-box;
+    border-image-slice: 30 30% 45;
+    padding:20px;
+    margin-top:30px;
 }
 .ability{
     text-transform: capitalize;
     margin:4px 0;
+}
+.flex2{
+    display: flex;
+}
+.grass{
+    background-color: #9BCC50;
+    color: #FFFFFF;
+}
+.poison{
+    background-color: #B97FC9;
+    color: #FFFFFF;
+}
+.fire{
+    background-color: #FC7C23;
+    color: #FFFFFF;
+}
+.bug{
+    background-color: #729F3F;
+    color:#FFffff;
+}
+.water{
+    background-color: #4592C4;
+    color:#FFffff;
+}
+.flying{
+    background-color: #30A7D7;
+    color: #FFFFFF;
+}
+.height, .exp {
+    margin-bottom: 20px;
+}
+.pill{
+    padding:3px 10px;
+    border-radius: 3px;
 }
