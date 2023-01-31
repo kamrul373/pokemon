@@ -128,3 +128,9 @@
    padding-top: 4px;
    display: inline-block;
 }
+@media all and (max-width:768px){
+    .grid{
+        grid-template-columns: repeat(1,1fr);
+      
+    }
+}

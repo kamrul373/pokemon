@@ -45,3 +45,17 @@
 .marginbottom{
     margin-bottom: 10px;
 }
+@media all and (max-width:768px){
+    .flex{
+        flex-direction: column;
+    }
+    .left{
+        width:100%;
+    }
+    .right{
+        width: 100%;
+    }
+    .articlecontent img{
+       padding:10px;
+    }
+}
