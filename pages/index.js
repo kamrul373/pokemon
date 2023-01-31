@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import Header from '@/components/Header'
 import { request, gql, GraphQLClient } from 'graphql-request'
+import Article from '@/components/Article'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({pokemons}) {
@@ -10,6 +11,7 @@ export default function Home({pokemons}) {
   return (
     <>
       <Header pokemons={pokemons}></Header>
+      <Article></Article>
     </>
   )
 }
