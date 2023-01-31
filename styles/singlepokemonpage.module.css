@@ -1,0 +1,42 @@
+.logo{
+    text-align: center;
+    padding: 20px 0;
+}
+.singlepage{
+    background-image:url("../assets/img/Left.png");
+    background-position: center center;
+    min-height: 100vh;
+}
+.singlepagecontent{
+    background-color: #FFFFFF;
+    width: 80%;
+    margin:0 auto;
+    height: 100vh;
+    padding: 20px;
+}
+.singlepagecontent h2{
+    color:#257BC4;
+    text-transform: capitalize;
+    font-size: 40px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    gap: 30px;
+    padding:50px ;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.card{
+    border-image: conic-gradient(#FAB4D1, #FB7939, #F56B96) 1;
+    border-radius: 8px 8px 57px 8px;
+    padding:20px
+}
+.ability{
+    text-transform: capitalize;
+    margin:4px 0;
+}

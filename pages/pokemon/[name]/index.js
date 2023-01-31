@@ -1,10 +1,52 @@
-
+import logo from "../../../assets/img/Logo.png"
+import Image from "next/image";
 import { request, gql } from 'graphql-request'
+import styles from "../../../styles/singlepokemonpage.module.css"
+import Link from "next/link";
 const pokemon = ({pokemon}) => {
     console.log(pokemon)
+    const imageURL = ``
     return (
-        <div>
-            <h2>Single Pokemon page</h2>
+        <div className={styles.singlepage}>
+            <div className={styles.singlepagecontent}>
+                <div className={styles.logo}>
+                    <Link href="/"><Image src={logo} alt="logo" /></Link>
+                </div>
+                <div className={styles.grid}>
+                    <div>
+                        <h2>{pokemon.name} #0{pokemon.id}0</h2>
+                        <div className={styles.card}>
+                            <div className={styles.flex}>
+                               <div>
+                                    <h4>Height</h4>
+                                    <p>{pokemon.height}</p>
+                               </div>
+                               <div>
+                                    <h4>Experience</h4>
+                                    <div>{pokemon.base_experience}</div>
+                                </div>
+                            </div>
+                            <div className={styles.flex}>
+                                <div>
+                                    <h4>Weight</h4>
+                                    <p>{pokemon.weight}</p>
+                                </div>
+                                
+                                <div>
+                                    <h4>Abilities</h4>
+                                    <div>{pokemon.abilities.map((ability,idx)=> <p key={idx} className={styles.ability}>{ability.ability.name}</p>)}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`} alt={pokemon.name} width="100%" height="100%" />
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
@@ -13,9 +55,8 @@ export const getServerSideProps = async ({params}) => {
    
     const query = gql ` query pokemon($name: String!){
         pokemon(name: $name) {
-            id
-            name
-           
+           id
+           name
            height
             weight
             abilities{
@@ -47,7 +88,7 @@ export const getServerSideProps = async ({params}) => {
       })
     return {
         props : {
-            pokemon 
+            pokemon : pokemon.pokemon
         }
     }
 }

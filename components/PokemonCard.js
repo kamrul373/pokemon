@@ -17,7 +17,7 @@ const PokemonCard = ({pokemon}) => {
                             {
                                 pokemon?.types.map((type,idx) => {
                                     let typeName = type.type.name;
-                                    return <div className={`${styles[typeName]} ${styles.pill}`} >{type.type.name}</div>
+                                    return <div key={idx} className={`${styles[typeName]} ${styles.pill}`} >{type.type.name}</div>
                                 })
                             }
                         </div>
