@@ -1,0 +1,83 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding:50px ;
+}
+
+.card{
+    min-width: 170px;
+    min-height: 220px;
+    padding: 10px;
+    background-color: #FFF;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: background-color 0.5s linear;
+    border-radius: 8px 8px 57px 8px;
+    text-align: left;
+}
+.card:hover{
+    background-color: #3383C8;
+    
+}
+.card:hover h3{
+    color: #FFFFFF;
+}
+.pokemon{
+    text-transform: capitalize;
+}
+.pokemonimg{
+    width: 100%;
+    height: 100%;
+    padding:15px;
+    background-color: #F2F2F2;
+}
+.content{
+    padding:10px 0;
+}
+.flex{
+    display: flex;
+    gap:10px;
+    padding-top: 5px;
+}
+
+.grass{
+    background-color: #9BCC50;
+    color: #FFFFFF;
+}
+.poison{
+    background-color: #B97FC9;
+    color: #FFFFFF;
+}
+.fire{
+    background-color: #FC7C23;
+    color: #FFFFFF;
+}
+.bug{
+    background-color: #729F3F;
+    color:#FFffff;
+}
+.water{
+    background-color: #4592C4;
+    color:#FFffff;
+}
+.flying{
+    background-color: #30A7D7;
+    color: #FFFFFF;
+}
+.pill{
+    padding:3px 10px;
+    border-radius: 3px;
+}
+
+@media all and (max-width:768px){
+    .grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media all and (max-width:520px){
+    .grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
