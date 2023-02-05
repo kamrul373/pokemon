@@ -2,6 +2,7 @@
     background-image: url("../assets/img/Left.png");
     background-position: center center;
     min-height: 100vh;
+    color:#000000;
 }
 .articlecontent{
     background-color: white;
